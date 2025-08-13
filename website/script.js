@@ -1,5 +1,20 @@
 let tabs = document.querySelectorAll('.single-feature');
 let tabContent = document.querySelectorAll('.features-content');
+let questions = document.querySelectorAll('.single-question');
+
+questions.forEach(question => {
+    question.addEventListener('click', e => {
+        let curAnswer = question.querySelector('.answer');
+        let curImg = question.querySelector('.arrow-img')
+        if(!curAnswer.classList.contains('clicked')) {
+            curAnswer.classList.add('clicked');
+            curImg.classList.add('clicked');
+        } else {
+            curAnswer.classList.remove('clicked');
+            curImg.classList.remove('clicked');
+        }
+    });
+});
 
 const displayNoneAll = () => {
     tabContent.forEach(tabC => {
