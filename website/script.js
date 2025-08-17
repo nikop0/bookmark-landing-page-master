@@ -1,6 +1,16 @@
 let tabs = document.querySelectorAll('.single-feature');
 let tabContent = document.querySelectorAll('.features-content');
 let questions = document.querySelectorAll('.single-question');
+let navMenuMobile = document.querySelector('.nav-links');
+let navMenuBtn = document.querySelector('.nav-buttn');
+
+navMenuBtn.addEventListener('click', e => {
+    if(!navMenuMobile.classList.contains('clicked')) {
+            navMenuMobile.classList.add('clicked');
+        } else {
+            navMenuMobile.classList.remove('clicked');
+        }
+});
 
 questions.forEach(question => {
     question.addEventListener('click', e => {

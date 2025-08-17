@@ -129,11 +129,10 @@ body {
     color: hsla(229, 31%, 21%, 0.596);
 }
 
-
 .img-background {
     background-color: hsl(231, 69%, 60%);
     height: 300px;
-    width: 500px;
+    width: 30%;
     position: absolute;
     right: 0;
     bottom: 0;
@@ -256,7 +255,7 @@ h2 {
 }
 
 .single-download {
-    max-width: 280px;
+    max-width: 250px;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -296,7 +295,10 @@ h2 {
     margin-right: auto;
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 32px;
+    max-width: 900px;
+    width: 100%;
 }
 
 #chrome-card {
@@ -467,4 +469,160 @@ h2 {
     color: white;
     text-align: center;
     margin-top: 32px;
+}
+
+.nav-buttn {
+    cursor: pointer;
+    display: none;
+}
+
+@media screen and (max-width: 900px) {
+    body {
+        overflow-x: hidden;
+    }
+    .nav-bar {
+        padding-left: 10px;
+        padding-right: 10px;
+        position: relative;
+    }
+    .nav-buttn {
+        display: block;
+    }
+    .nav-links {
+        flex-direction: column;
+        width: 100%;
+        top: 100px;
+        left: 0;
+        right: 0;
+        background-color: hsl(229, 31%, 21%);
+        color: white;
+        position: absolute;
+        padding: 30px 0px;
+        z-index: 1;
+        display: none;
+    }
+
+    .nav-links.clicked {
+        display: flex;
+    }
+    .container {
+        flex-direction: column;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    
+    .hero-container {
+        flex-direction: column-reverse;
+        gap: 32px;
+    }
+
+    .features-section {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+    .features-img-background{
+        top: 50px;
+        bottom: unset;
+        width: 400px;
+        height: 250px;
+    }
+
+    .features-content {
+        position: relative;
+    }
+
+    .features-text-wrapper {
+        max-width: 450px;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .hero-right {
+        position: relative;
+    }
+
+    .hero-section .img-background {
+        bottom: unset;
+        top: 150px;
+        width: 400px;
+    }  
+
+    .features-left img{
+        max-width: 400px;
+    }
+    .features-left {
+        margin-bottom: 64px;
+    }
+
+    .single-feature {
+        width: 100%;
+        border-bottom: 1px solid hsla(229, 31%, 21%, 0.363);
+    }
+    .features-links {
+        gap: 24px;
+    }
+
+    .features-content {
+        margin-top: 72px;
+        max-height: unset;
+    }
+
+    .features-line {
+        display: none;
+    }
+    .hero-right img{
+        max-width: 500px;
+    }
+
+    .features-links {
+        flex-direction: column;
+    }
+
+    .features-right {
+        width: 100%;
+        text-align: center;
+    }
+    .footer-left {
+        flex-direction: column;
+    }
+
+    .footer-right {
+        margin-top: 32px;
+        justify-content: center;
+    }
+
+    .cta-form {
+        flex-direction: column;
+    }
+
+    .cta-form input {
+        width: 100%;
+    }
+
+    .download-content {
+        flex-direction: column;
+        gap: 32px;
+        width: 100%;
+    }
+    .download-container {
+        width: 100%;
+    }
+
+    .download-section {
+        padding-top: 60px;
+    }
+
+    #firefox-card {
+        margin-top: 0px;
+    }
+
+    #opera-card {
+        margin-top: 0px;
+    }
+
+    .single-download {
+        max-width: 300px;
+        width: 100%;
+    }
 }
